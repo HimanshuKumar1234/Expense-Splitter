@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Trash2, DollarSign } from 'lucide-react';
+import { Users, Trash2, Circle } from 'lucide-react';
 import { useExpense } from '../context/ExpenseContext';
 
 export function PersonList() {
@@ -47,11 +47,11 @@ export function PersonList() {
                 <h3 className="font-medium text-gray-900">{person.name}</h3>
                 <div className="text-sm text-gray-600 space-y-1">
                   <div className="flex items-center gap-1">
-                    <DollarSign className="h-3 w-3" />
+                    <Circle className="h-1.5 w-1.5 text-gray-800 dark:text-gray-200" fill="currentColor" />
                     Paid: {formatCurrency(person.totalPaid)}
                   </div>
                   <div className="flex items-center gap-1">
-                    <DollarSign className="h-3 w-3" />
+                    <Circle className="h-1.5 w-1.5 text-gray-800 dark:text-gray-200" fill="currentColor" />
                     Owes: {formatCurrency(person.totalOwes)}
                   </div>
                   <div className={`font-medium ${
